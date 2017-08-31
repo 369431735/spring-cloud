@@ -1,0 +1,12 @@
+spring:
+    datasource:
+       driver-calss-name: com.mysql.jdbc.Driver    #驱动类
+       url: jdbc:mysql://127.0.0.1:3307/springcloud?buseUnicode=true&amp;characterEncoding=UTF-8        #数据库地址
+       username: root
+       password: root
+       schema:  classpath:schema.sql
+       data:  classpath:data.sql
+    jpa:
+        hibernate:
+          ddl-auto: update
+        show-sql: false
