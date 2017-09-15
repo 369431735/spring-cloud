@@ -10,3 +10,11 @@ spring:
         hibernate:
           ddl-auto: update
         show-sql: false
+    application:
+        name: provider    #用于指定到Eureka Server上的应用名称
+eureka:
+  client:
+     serviceUrl:
+          defaultZone: http://localhost:8761/eureka/
+     instance:
+          prefer-ip-adress: true  #用于将自己的ip注册到Eureka Server 上。如不配置该属性或设置为false,则表示注册微服务所在操作系统的hostname到Eureka Server
